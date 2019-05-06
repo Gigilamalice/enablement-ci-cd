@@ -3,3 +3,9 @@ ansible_connection: local
 openshift_cluster_content:
 - object: ci-cd-tooling
   content:
+  - name: "nexus"
+    namespace: "{{ ci_cd_namespace }}"
+    template: "{{ playbook_dir }}/templates/nexus.yml"
+    params: "{{ playbook_dir }}/params/nexus"
+    tags:
+    - nexus
