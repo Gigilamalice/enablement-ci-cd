@@ -15,3 +15,17 @@ openshift_cluster_content:
     params: "{{ playbook_dir }}/params/mongodb"
     tags:
     - mongodb
+  - name: "jenkins"
+    namespace: "{{ ci_cd_namespace }}"
+    template: "{{ playbook_dir }}/templates/jenkins.yml"
+    params: "{{ playbook_dir }}/params/jenkins"
+    tags:
+    - jenkins
+- object: ci-cd-builds
+  content:
+  - name: "jenkins-s2i"
+    namespace: "{{ ci_cd_namespace }}"
+    template: "{{ playbook_dir }}/templates/jenkins-s2i.yml"
+    params: "{{ playbook_dir }}/params/jenkins-s2i"
+    tags:
+    - jenkins

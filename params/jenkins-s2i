@@ -1,0 +1,6 @@
+SOURCE_REPOSITORY_URL=https://github.com/Gigilamalice/enablement-ci-cd.git
+NAME=jenkins
+SOURCE_REPOSITORY_CONTEXT_DIR=jenkins-s2i
+IMAGE_STREAM_NAMESPACE=myproject-ci-cd
+SOURCE_REPOSITORY_USERNAME=admin	
+SOURCE_REPOSITORY_PASSWORD=redhat
